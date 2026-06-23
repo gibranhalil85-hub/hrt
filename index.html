@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>col Here we go again</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:#000;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    padding:20px;
+}
+
+/* Countdown Full Screen */
+#loading-screen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+#countdown{
+    font-size:100px;
+    font-weight:bold;
+    color:#ff0033;
+}
+
+/* Gallery */
+.container{
+    max-width:1400px;
+    margin:auto;
+    display:none;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.box{
+    background:#111;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+    border:1px solid #222;
+}
+
+.cta-btn{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-decoration:none;
+}
+
+.cta-btn img{
+    width:100%;
+    max-width:320px;
+    border-radius:12px;
+    margin-bottom:15px;
+    box-shadow:0 0 20px rgba(255,255,255,.15);
+    transition:.3s;
+}
+
+.cta-btn:hover img{
+    transform:scale(1.03);
+}
+
+.watch-btn{
+    color:#2196f3;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:underline;
+    transition:.3s;
+}
+
+.cta-btn:hover .watch-btn{
+    color:#64b5f6;
+    text-shadow:0 0 10px rgba(33,150,243,.8);
+}
+
+.note{
+    margin-top:12px;
+    color:#aaa;
+    font-size:13px;
+}
+
+@media(max-width:768px){
+    .container{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    #countdown{
+        font-size:90px;
+    }
+
+    .watch-btn{
+        font-size:16px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Countdown -->
+
+<div id="loading-screen">
+    <div id="countdown">5</div>
+</div>
+
+<!-- Gallery -->
+
+<div class="container" id="gallery">
+
+<!-- BOX 1 -->
+<div class="box">
+    <a href="https://masterpiece27.github.io/foundyourgirl/?v=D9wbxDNK1.mp4"
+       class="cta-btn"
+       target="_blank">
+
+        <img src="https://ik.imagekit.io/9skj9ruuwg/Is%20it%20officially%20time%20to%20eat.jpg">
+
+        <div class="watch-btn">Is it officially time to eat?</div>
+
+    </a>
+
+    <div class="note">Video may take a moment to load.</div>
+</div>
+
+<!-- BOX 2 -->
+<div class="box">
+    <a href="https://masterpiece27.github.io/foundyourgirl/?v=Mei7KfCN1.mp4"
+       class="cta-btn"
+       target="_blank">
+
+        <img src="https://ik.imagekit.io/9skj9ruuwg/Real%20property.jpg">
+
+        <div class="watch-btn">Real property</div>
+
+    </a>
+
+    <div class="note">Video may take a moment to load.</div>
+</div>
+
+<!-- BOX 3 -->
+<div class="box">
+    <a href="https://brewdismaychest.com/xmj0tup7m?key=ec38fd4a1c9eb79b5968a6db8d42ae05"
+       class="cta-btn"
+       target="_blank">
+
+        <img src="https://ik.imagekit.io/9skj9ruuwg/WhatsApp%20Image%202026-06-21%20at%2004.55.17.jpeg">
+
+        <div class="watch-btn">Running on 1% and Pure Vibes</div>
+
+    </a>
+
+    <div class="note">Video may take a moment to load.</div>
+</div>
+
+<!-- BOX 4 -->
+<div class="box">
+    <a href="https://masterpiece27.github.io/foundyourgirl/?v=iGzp2xMa1.mp4"
+       class="cta-btn"
+       target="_blank">
+
+        <img src="https://ik.imagekit.io/9skj9ruuwg/Do%20Re%20Mi.jpg">
+
+        <div class="watch-btn">Here we go again</div>
+
+    </a>
+
+    <div class="note">Video may take a moment to load.</div>
+</div>
+
+<!-- BOX 5 -->
+<div class="box">
+    <a href="https://brewdismaychest.com/xmj0tup7m?key=ec38fd4a1c9eb79b5968a6db8d42ae05"
+       class="cta-btn"
+       target="_blank">
+
+        <img src="https://ik.imagekit.io/9skj9ruuwg/WhatsApp%20Image%202026-06-21%20at%2004.34.56.jpeg">
+
+        <div class="watch-btn">Dess Dior Single Summer</div>
+
+    </a>
+
+    <div class="note">Video may take a moment to load.</div>
+</div>
+
+<!-- BOX 6 -->
+<div class="box">
+    <a href="https://masterpiece27.github.io/foundyourgirl/?v=mOETiGNV1.mp4"
+       class="cta-btn"
+       target="_blank">
+
+        <img src="https://ik.imagekit.io/9skj9ruuwg/Just%20Me%20Enjoyin'%20The%20Moment._.jpg">
+
+        <div class="watch-btn">Just Me Enjoyin' The Moment</div>
+
+    </a>
+
+    <div class="note">Video may take a moment to load.</div>
+</div>
+
+</div>
+
+<script>
+
+let time = 5;
+
+const countdown = document.getElementById("countdown");
+const loadingScreen = document.getElementById("loading-screen");
+const gallery = document.getElementById("gallery");
+
+const timer = setInterval(() => {
+
+    time--;
+
+    countdown.textContent = time;
+
+    if(time <= 0){
+
+        clearInterval(timer);
+
+        loadingScreen.style.display = "none";
+        gallery.style.display = "grid";
+
+    }
+
+},1000);
+
+</script>
+
+<!-- Histats.com START -->
+<script type="text/javascript">
+var _Hasync = _Hasync || [];
+_Hasync.push(['Histats.start', '1,5016166,4,9,110,60,00011111']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+
+(function () {
+var hs = document.createElement('script');
+hs.type = 'text/javascript';
+hs.async = true;
+hs.src = "//s10.histats.com/js15_as.js";
+(document.head || document.body).appendChild(hs);
+})();
+</script>
+
+<noscript>
+<a href="/" target="_blank">
+<img src="//sstatic1.histats.com/0.gif?5007368&101"
+alt="counter"
+border="0">
+</a>
+</noscript>
+<!-- Histats.com END -->
+
+</body>
+</html>
